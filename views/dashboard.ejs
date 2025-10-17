@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+
+<!-- Navbar -->
+<nav class="bg-white shadow p-4 flex justify-between">
+<h1 class="font-bold text-2xl text-blue-600">Welcome, <%= teacher.name %></h1>
+<div>
+<a href="/add-student" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Student</a>
+<a href="/logout" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 ml-2">Logout</a>
+</div>
+</nav>
+
+
+
+<!-- Student Table -->
+<div class="p-8 flex-1">
+<h2 class="text-xl font-bold mb-4">Your Students</h2>
+<% if(students.length === 0){ %>
+<p>No students added yet.</p>
+<% } else { %>
+<table class="w-full border">
+<thead>
+<tr class="bg-gray-200">
+<th class="border p-2">Name</th>
+<th class="border p-2">Age</th>
+<th class="border p-2">Actions</th>
+</tr>
+</thead>
+<tbody>
+<% students.forEach(s => { %>
+<tr>
+<td class="border p-2"><%= s.name %></td>
+<td class="border p-2"><%= s.age %></td>
+<td class="border p-2">
+<a href="/edit-student/<%= s._id %>" class="text-blue-500">Edit</a> |
+<a href="/delete-student/<%= s._id %>" class="text-red-500">Delete</a>
+</td>
+</tr>
+<% }) %>
+</tbody>
+</table>
+<% } %>
+</div>
+
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-300 mt-auto">
+  <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+    <!-- About -->
+    <div>
+      <h3 class="text-white font-bold text-lg mb-4">StudentMgmt</h3>
+      <p class="text-gray-400 text-sm">A modern platform to manage students, courses, and reports efficiently. Fast, secure, and responsive.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-white font-bold text-lg mb-4">Quick Links</h3>
+      <ul class="space-y-2">
+        <li><a href="/" class="hover:text-white transition">Home</a></li>
+        <li><a href="/signup" class="hover:text-white transition">Signup</a></li>
+        <li><a href="/login" class="hover:text-white transition">Login</a></li>
+        <li><a href="#features" class="hover:text-white transition">Features</a></li>
+        <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <h3 class="text-white font-bold text-lg mb-4">Contact</h3>
+      <p class="text-gray-400 text-sm">123 Main Street, City, Country</p>
+      <p class="text-gray-400 text-sm">Email: support@studentmgmt.com</p>
+      <p class="text-gray-400 text-sm">Phone: +91 1234567890</p>
+    </div>
+
+    <!-- Social & Newsletter -->
+    <div>
+      <h3 class="text-white font-bold text-lg mb-4">Follow Us</h3>
+      <div class="flex space-x-4 mb-4">
+        <a href="#" class="hover:text-white transition">Facebook</a>
+        <a href="#" class="hover:text-white transition">Twitter</a>
+        <a href="#" class="hover:text-white transition">LinkedIn</a>
+      </div>
+      <h3 class="text-white font-bold text-lg mb-2">Subscribe</h3>
+      <form class="flex flex-col sm:flex-row gap-2">
+        <input type="email" placeholder="Your email" class="p-2 rounded w-full text-gray-800" required>
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Subscribe</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="border-t border-gray-700 mt-8 py-4 text-center text-gray-500 text-sm">
+    &copy; 2025 Student Management System. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>

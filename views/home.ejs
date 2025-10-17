@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Management System</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 scroll-smooth">
+
+<!-- Navbar -->
+<nav class="fixed w-full bg-white shadow-md z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+    <h1 class="font-bold text-2xl text-blue-600">Student Mgmt</h1>
+    <div class="space-x-4">
+      <a href="#home" class="hover:text-blue-600 transition">Home</a>
+      <a href="#features" class="hover:text-blue-600 transition">Features</a>
+      <a href="#about" class="hover:text-blue-600 transition">About</a>
+      <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+      <a href="/signup" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Signup</a>
+      <a href="/login" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">Login</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Home Section -->
+<section id="home" class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-200 via-white to-blue-200 text-center px-4">
+  <h2 class="text-5xl font-extrabold mb-4">Welcome to Student Management System</h2>
+  <p class="text-lg md:text-xl mb-6">Manage students, courses, and records effortlessly with our modern platform.</p>
+  <div class="space-x-4">
+    <a href="#features" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition">Explore Features</a>
+    <a href="/signup" class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition">Get Started</a>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <h3 class="text-4xl font-bold mb-12">Features</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-6 bg-gray-100 rounded-lg shadow hover:shadow-lg transition">
+        <h4 class="font-bold text-2xl mb-2">Student Records</h4>
+        <p>Keep track of all student information with an easy-to-use interface.</p>
+      </div>
+      <div class="p-6 bg-gray-100 rounded-lg shadow hover:shadow-lg transition">
+        <h4 class="font-bold text-2xl mb-2">Course Management</h4>
+        <p>Manage courses, assign students, and track performance efficiently.</p>
+      </div>
+      <div class="p-6 bg-gray-100 rounded-lg shadow hover:shadow-lg transition">
+        <h4 class="font-bold text-2xl mb-2">Reports & Analytics</h4>
+        <p>Generate reports and insights to make better administrative decisions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-blue-50">
+  <div class="max-w-5xl mx-auto px-4 text-center">
+    <h3 class="text-4xl font-bold mb-6">About Us</h3>
+    <p class="text-lg mb-4">Our Student Management System is designed to simplify the academic administration process. From tracking student performance to managing courses and schedules, everything is in one place.</p>
+    <p class="text-lg">Built with modern technologies, it is fast, secure, and responsive on all devices.</p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-white">
+  <div class="max-w-3xl mx-auto px-4 text-center">
+    <h3 class="text-4xl font-bold mb-6">Contact Us</h3>
+    <p class="text-lg mb-8">Have questions or need support? Reach out to us anytime!</p>
+    <form class="grid gap-4">
+      <input type="text" placeholder="Your Name" class="p-3 border rounded-md w-full" required>
+      <input type="email" placeholder="Your Email" class="p-3 border rounded-md w-full" required>
+      <textarea placeholder="Your Message" class="p-3 border rounded-md w-full"></textarea required>
+      <button type="submit" class="bg-blue-500 rounded-md text-white px-6 py-3 rounded hover:bg-blue-600 transition">Send Message</button>
+    </form>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-300 mt-auto">
+  <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+    <!-- About -->
+    <div>
+      <h3 class="text-white font-bold text-lg mb-4">StudentMgmt</h3>
+      <p class="text-gray-400 text-sm">A modern platform to manage students, courses, and reports efficiently. Fast, secure, and responsive.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-white font-bold text-lg mb-4">Quick Links</h3>
+      <ul class="space-y-2">
+        <li><a href="/" class="hover:text-white transition">Home</a></li>
+        <li><a href="/signup" class="hover:text-white transition">Signup</a></li>
+        <li><a href="/login" class="hover:text-white transition">Login</a></li>
+        <li><a href="#features" class="hover:text-white transition">Features</a></li>
+        <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <h3 class="text-white font-bold text-lg mb-4">Contact</h3>
+      <p class="text-gray-400 text-sm">123 Main Street, City, Country</p>
+      <p class="text-gray-400 text-sm">Email: support@studentmgmt.com</p>
+      <p class="text-gray-400 text-sm">Phone: +91 1234567890</p>
+    </div>
+
+    <!-- Social & Newsletter -->
+    <div>
+      <h3 class="text-white font-bold text-lg mb-4">Follow Us</h3>
+      <div class="flex space-x-4 mb-4">
+        <a href="#" class="hover:text-white transition">Facebook</a>
+        <a href="#" class="hover:text-white transition">Twitter</a>
+        <a href="#" class="hover:text-white transition">LinkedIn</a>
+      </div>
+      <h3 class="text-white font-bold text-lg mb-2">Subscribe</h3>
+      <form class="flex flex-col sm:flex-row gap-2">
+        <input type="email" placeholder="Your email" class="p-2 rounded w-full text-gray-800" required>
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Subscribe</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="border-t border-gray-700 mt-8 py-4 text-center text-gray-500 text-sm">
+    &copy; 2025 Student Management System. All rights reserved.
+  </div>
+</footer>
+
+
+
+</body>
+</html>

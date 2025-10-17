@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+
+<!-- Navbar -->
+<nav class="bg-white shadow p-4 flex justify-between items-center">
+  <h1 class="font-bold text-2xl text-blue-600">Student Mgmt</h1>
+  <a href="/signup" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Signup</a>
+</nav>
+
+<!-- Login Form -->
+<main class="flex-grow flex justify-center items-center py-10 px-4">
+  <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+    <h1 class="text-2xl font-bold mb-6 text-center">Teacher Login</h1>
+    
+
+    <form action="/login" method="POST" class="flex flex-col gap-4">
+      <input type="email" name="email" placeholder="Email" required class="border p-2 rounded w-full">
+      <input type="password" name="password" placeholder="Password" required class="border p-2 rounded w-full">
+      <button type="submit" class="bg-green-500 text-white p-2 rounded hover:bg-green-600 w-full transition">Login</button>
+    </form>
+    
+    <p class="mt-4 text-center text-sm">
+      Don't have account? <a href="/signup" class="text-blue-500 hover:underline">Signup</a>
+    </p>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-300 mt-auto">
+  <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+    <!-- About -->
+    <div>
+      <h3 class="text-white font-bold text-lg mb-4">StudentMgmt</h3>
+      <p class="text-gray-400 text-sm">A modern platform to manage students, courses, and reports efficiently. Fast, secure, and responsive.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-white font-bold text-lg mb-4">Quick Links</h3>
+      <ul class="space-y-2">
+        <li><a href="/" class="hover:text-white transition">Home</a></li>
+        <li><a href="/signup" class="hover:text-white transition">Signup</a></li>
+        <li><a href="/login" class="hover:text-white transition">Login</a></li>
+        <li><a href="#features" class="hover:text-white transition">Features</a></li>
+        <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <h3 class="text-white font-bold text-lg mb-4">Contact</h3>
+      <p class="text-gray-400 text-sm">123 Main Street, City, Country</p>
+      <p class="text-gray-400 text-sm">Email: support@studentmgmt.com</p>
+      <p class="text-gray-400 text-sm">Phone: +91 1234567890</p>
+    </div>
+
+    <!-- Social & Newsletter -->
+    <div>
+      <h3 class="text-white font-bold text-lg mb-4">Follow Us</h3>
+      <div class="flex space-x-4 mb-4">
+        <a href="#" class="hover:text-white transition">Facebook</a>
+        <a href="#" class="hover:text-white transition">Twitter</a>
+        <a href="#" class="hover:text-white transition">LinkedIn</a>
+      </div>
+      <h3 class="text-white font-bold text-lg mb-2">Subscribe</h3>
+      <form class="flex flex-col sm:flex-row gap-2">
+        <input type="email" placeholder="Your email" class="p-2 rounded w-full text-gray-800" required>
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Subscribe</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="border-t border-gray-700 mt-8 py-4 text-center text-gray-500 text-sm">
+    &copy; 2025 Student Management System. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
